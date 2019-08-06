@@ -1,0 +1,20 @@
+$sans-serif: 'Gilroy', 'Arial', sans-serif;
+
+$c-text-on-secondary: #FFF;
+$c-text-on-primary: #FFF;
+$c-primary: #6ec656;
+
+// Минимальная и максимальная ширина различных устройств
+$devices: (
+    small-mobile: (max: 424px),
+    mobile: (min: 425px, max: 630px),
+    small-tablet: (min: 631px, max: 800px),
+    tablet: (min: 801px, max: 1049px),
+    desktop: (min: 1050px)
+);
+
+$menu: (
+    header-height: 56px,
+    background-color: #191919,
+    color: #A6A6A6,
+);

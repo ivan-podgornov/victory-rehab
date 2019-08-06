@@ -1,0 +1,32 @@
+.page-header {
+    position: relative;
+
+    &:before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        padding: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #5C4A48;
+        z-index: -2;
+    }
+
+    @include minimum-for('tablet') {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    @include minimum-for('desktop') {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+.page-header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: map-get($menu, 'header-height');
+}

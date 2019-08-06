@@ -1,0 +1,90 @@
+.site-menu__container {
+    @include maximum-for('small-tablet') {
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: -1;
+    }
+}
+
+.site-menu__toggler:checked {
+    @include maximum-for('small-tablet') {
+        & ~ .site-menu__container {
+            background-color: rgba(#000, 0.5);
+            z-index: 1;
+        }
+
+        & ~ .site-menu__container .site-menu {
+            right: 0;
+        }
+    }
+}
+
+.site-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    white-space: nowrap;
+
+    @include maximum-for('small-tablet') {
+        height: 100%;
+        width: 100%;
+        max-width: 250px;
+        padding-top: map-get($menu, 'header-height');
+        position: absolute;
+        top: 0;
+        right: -250px;
+        background-color: map-get($menu, 'background-color');
+        transition: 0.2s right ease;
+        overflow-y: auto;
+    }
+}
+
+.site-menu__item {
+    @include minimum-for('tablet') {
+        display: inline-block;
+        vertical-align: baseline;
+    }
+}
+
+.site-menu__link {
+    display: block;
+    text-decoration: none;
+
+    @include maximum-for('small-tablet') {
+        padding: 12px 16px;
+        color: map-get($menu, 'color');
+        font-size: 14px;
+        font-weight: bold;
+        border-bottom: 1px solid #1C1C1C;
+        transition: 0.2s color ease;
+
+        &:hover {
+            color: #FFF;
+        }
+
+        &::selection {
+            background-color: transparent;
+        }
+    }
+
+    @include minimum-for('tablet') {
+        padding: 12px;
+        color: $c-text-on-primary;
+        font-size: 17px;
+        font-weight: 500;
+        border-radius: 3px;
+        transition: 0.2s background-color ease;
+
+        &:hover {
+            background-color: $c-primary;
+        }
+    }
+
+    @include minimum-for('desktop') {
+        padding: 12px 20px;
+    }
+}

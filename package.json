@@ -1,0 +1,11 @@
+{
+  "name": "victory-rehab",
+  "version": "1.0.0",
+  "author": "ivan-podgornov",
+  "scripts": {
+    "dev": "termite"
+  },
+  "dependencies": {
+    "@termite/cli": "^2.0.6"
+  }
+}
