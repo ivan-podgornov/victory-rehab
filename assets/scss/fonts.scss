@@ -29,7 +29,7 @@
 @font-face {
     font-display: swap;
     font-family: 'Gilroy';
-    font-weight: 500;
+    font-weight: bold;
     font-style: normal;
 
     src: url('/fonts/Gilroy/Gilroy-Medium.eot');
@@ -43,7 +43,7 @@
 @font-face {
     font-display: swap;
     font-family: 'Gilroy';
-    font-weight: 500;
+    font-weight: bold;
     font-style: italic;
 
     src: url('/fonts/Gilroy/Gilroy-MediumItalic.eot');
@@ -57,7 +57,7 @@
 @font-face {
     font-display: swap;
     font-family: 'Gilroy';
-    font-weight: bold;
+    font-weight: 900;
     font-style: normal;
 
     src: url('/fonts/Gilroy/Gilroy-Bold.eot');
@@ -71,7 +71,7 @@
 @font-face {
     font-display: swap;
     font-family: 'Gilroy';
-    font-weight: bold;
+    font-weight: 900;
     font-style: italic;
 
     src: url('/fonts/Gilroy/Gilroy-BoldItalic.eot');
@@ -80,4 +80,32 @@
         url('/fonts/Gilroy/Gilroy-BoldItalic.woff') format('woff'),
         url('/fonts/Gilroy/Gilroy-BoldItalic.ttf') format('truetype'),
         url('/fonts/Gilroy/Gilroy-BoldItalic.svg') format('svg');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'PT Serif';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('/fonts/PT Serif/PTSerif-Regular.eot');
+    src: url('/fonts/PT Serif/PTSerif-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/PT Serif/PTSerif-Regular.woff2') format('woff2'),
+        url('/fonts/PT Serif/PTSerif-Regular.woff') format('woff'),
+        url('/fonts/PT Serif/PTSerif-Regular.ttf') format('truetype'),
+        url('/fonts/PT Serif/PTSerif-Regular.svg') format('svg');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'PT Serif';
+    font-weight: bold;
+    font-style: normal;
+
+    src: url('/fonts/PT Serif/PTSerif-Bold.eot');
+    src: url('/fonts/PT Serif/PTSerif-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/PT Serif/PTSerif-Bold.woff2') format('woff2'),
+        url('/fonts/PT Serif/PTSerif-Bold.woff') format('woff'),
+        url('/fonts/PT Serif/PTSerif-Bold.ttf') format('truetype'),
+        url('/fonts/PT Serif/PTSerif-Bold.svg') format('svg');
 }

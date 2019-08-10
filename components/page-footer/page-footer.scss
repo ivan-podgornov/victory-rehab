@@ -1,0 +1,47 @@
+.page-footer {
+    color: #777;
+    padding: 12px 0;
+    border-top: 1px solid #E5E5E5;
+
+    @include minimum-for('small-tablet') { padding: 16px 0 }
+    @include minimum-for('desktop') { padding: 24px 0 }
+}
+
+.page-footer__content {
+    padding-right: 64px;
+    position: relative;
+}
+
+.page-footer__link {
+    color: inherit;
+    text-decoration-color: transparent;
+    transition: 0.2s text-decoration-color ease;
+
+    &:hover {
+        text-decoration-color: currentColor;
+    }
+}
+
+.page-footer__scroll-top {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%) rotate(90deg);
+    color: inherit;
+    font-family: 'Consolas', monospace;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+    outline: none;
+    opacity: 0.4;
+    transition: 0.2s opacity ease;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @include minimum-for('desktop') {
+        right: 16px;
+    }
+}

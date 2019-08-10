@@ -1,0 +1,58 @@
+.first-screen {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-align: center;
+
+    @include minimum-for('desktop') {
+        padding-top: 12.68vh;
+        padding-bottom: 12.68vh;
+    }
+}
+
+.first-screen__heading,
+.first-screen__sub-heading {
+    text-transform: uppercase;
+}
+
+.first-screen__heading {
+    margin: 0 !important;
+    padding: 0 !important;
+    color: $c-text-on-primary;
+    font-size: 42px;
+    line-height: 1.045;
+
+    @include minimum-for('small-tablet') { font-size: 50px !important }
+    @include minimum-for('tablet') { font-size: 75px !important }
+    @include minimum-for('desktop') { font-size: 100px !important }
+}
+
+.first-screen__sub-heading {
+    margin: 0 !important;
+    color: $c-primary;
+    font-family: $sans-serif !important;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.740;
+
+    @include minimum-for('small-tablet') { font-size: 23px }
+}
+
+.first-screen__mission {
+    max-width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $c-text-on-primary;
+    font-size: 16px;
+    text-align: center;
+
+    @include minimum-for('desktop') {
+        font-size: 20px;
+    }
+}
+
+.first-screen__call-us {
+    margin-top: 24px;
+
+    @include minimum-for('tablet') { margin-top: 36px }
+    @include minimum-for('desktop') { margin-top: 48px }
+}

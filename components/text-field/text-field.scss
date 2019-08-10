@@ -1,0 +1,116 @@
+@keyframes flex-border {
+    from {
+        left: 50%;
+        width: 0;
+    }
+    to {
+        left: 0;
+        width: 100%;
+    }
+}
+
+.text-field {
+    display: block;
+    margin-top: -8px;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+
+    &__input {
+        display: block;
+        min-height: 32px;
+        width: 100%;
+        margin-top: -20px;
+        padding: 34.8px 0 6.8px; /* 6.8px * 2 + 18.4 */
+        color: rgba($c-secondary, 0.67);
+        font-family: inherit;
+        font-size: 16px;
+        line-height: 1.15; /* 18.4px */
+        background-color: transparent;
+        border: none;
+        cursor: inherit;
+
+        @include apply-to-placeholder {
+            color: transparent;
+        }
+    }
+
+    &__label {
+        display: block;
+        position: absolute;
+        top: 16px; /* 34.8px */
+        color: #907f7d;
+        font-size: 12px;
+        transition: 0.3s all ease-out;
+    }
+
+    &__bottom-line {
+        height: 2px;
+        position: relative;
+        border-top: 3px solid #907f7d;
+        transition: 0.3s all ease-out;
+    }
+}
+
+/* -------- Состояние, когда поле не заполнено ------- */
+.text-field__input:placeholder-shown {
+    & ~ .text-field__label {
+        top: 34.8px;
+        font-size: 16px;
+    }
+}
+
+/* --------------------------------------------------- */
+/* ----- Состояние, когда курсор наведен на поле ----- */
+.text-field__input:hover {
+    & ~ .text-field__label {
+        color: $c-secondary;
+    }
+
+    & ~ .text-field__bottom-line {
+        border-top-color: $c-secondary;
+    }
+}
+
+/* --------------------------------------------------- */
+/* ---------- Состояние, когда поле в фокусе --------- */
+.text-field__input:focus {
+    color: $c-secondary;
+    outline: none;
+
+    & ~ .text-field__label {
+        top: 16px;
+        color: transparentize($c-secondary, 0.13);
+        font-size: 12px;
+    }
+
+    & ~ .text-field__bottom-line {
+        border-top-color: transparent;
+
+        &:before {
+            content: '';
+            height: inherit;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $c-secondary;
+            animation-name: flex-border;
+            animation-duration: 0.3s;
+        }
+    }
+}
+
+/* --------------------------------------------------- */
+/* ---------- Когда текстовое поле textarea ---------- */
+.text-field__input--multi {
+    overflow-y: hidden;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 56px;
+    transition: 0.3s border-color ease-out;
+
+    & ~ .text-field__label {
+        top: 16px;
+    }
+}

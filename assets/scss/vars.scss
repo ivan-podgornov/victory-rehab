@@ -1,8 +1,13 @@
 $sans-serif: 'Gilroy', 'Arial', sans-serif;
+$serif: 'PT Serif', serif;
 
-$c-text-on-secondary: #FFF;
+$c-text-on-secondary: #333;
 $c-text-on-primary: #FFF;
 $c-primary: #6ec656;
+$c-primary-text: #486350;
+$c-primary--dark: #528c3e;
+$c-primary--light: #aedd3c;
+$c-secondary: #f9fbf9;
 
 // Минимальная и максимальная ширина различных устройств
 $devices: (

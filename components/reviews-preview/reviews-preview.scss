@@ -1,0 +1,116 @@
+.reviews-preview {
+    color: $c-text-on-primary;
+    text-align: center;
+    background-image: url('./leaf.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.reviews-preview__content {
+    position: relative;
+}
+
+.reviews-preview__list {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.reviews-preview__item {
+    flex-shrink: 0;
+    width: 100%;
+    position: relative;
+    left: 0;
+    list-style-type: none;
+    transition: 0.5s left linear;
+}
+
+.reviews-preview__text {
+    max-width: 864px;
+    margin: 32px auto;
+    padding: 6px 16px;
+    font-size: 16px;
+    line-height: 1.65;
+
+    @include minimum-for('small-tablet') { font-size: 18px }
+    @include minimum-for('desktop') { font-size: 20px }
+}
+
+.reviews-preview__author {
+    display: block;
+    margin: 32px auto 16px;
+    font-size: 19px;
+
+    @include minimum-for('small-tablet') { font-size: 21px }
+    @include minimum-for('desktop') { font-size: 23px }
+}
+
+.reviews-preview__labels {
+    font-size: 0;
+    text-align: center;
+}
+
+.reviews-preview__label {
+    display: inline-block;
+    vertical-align: middle;
+    height: 12px;
+    width: 12px;
+    margin: 12px 4px;
+    background-color: #3d5a36;
+    border: 1px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+        content: '';
+        display: none;
+        height: 48px;
+        width: 48px;
+        margin: auto 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-image: url('./arrow.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 16px;
+        border-radius: 50%;
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        right: 0;
+        transform: rotate(180deg);
+    }
+
+    &--active {
+        background-color: $c-primary;
+    }
+}
+
+.reviews-preview__input {
+    @include visually-hidden;
+
+    @for $i from 1 through 3 {
+        &:nth-of-type(#{$i}):checked {
+            & ~ .reviews-preview__list .reviews-preview__item {
+                left: -($i * 100% - 100%);
+            }
+
+            & ~ .reviews-preview__labels .reviews-preview__label:nth-of-type(#{$i}) {
+                @extend .reviews-preview__label--active;
+            }
+
+            & ~ .reviews-preview__labels .reviews-preview__label:nth-of-type(#{$i - 1}):before,
+            & ~ .reviews-preview__labels .reviews-preview__label:nth-of-type(#{$i + 1}):after {
+                display: block;
+            }
+        }
+    }
+}

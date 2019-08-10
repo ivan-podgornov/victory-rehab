@@ -1,0 +1,65 @@
+.services-list {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style-type: none;
+    text-align: center;
+
+    @include maximum-for('mobile') {
+        padding-top: 4%;
+        padding-bottom: 4%;
+    }
+}
+
+.services-list__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 424px) {
+        &:not(:last-of-type) {
+            margin-right: 4%;
+        }
+    }
+
+    @include minimum-for('small-tablet') {
+        margin-top: 4%;
+        margin-bottom: 4%;
+    }
+}
+
+.services-list__link {
+    display: block;
+    max-width: 200px;
+    padding: 5.22% 6.96% 5.22% 34.78%;
+    color: $c-text-on-primary;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.286;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $c-primary--dark;
+    background-position: 8.7% center;
+    background-repeat: no-repeat;
+    background-size: 20.87% 60%;
+    border-radius: 3px;
+    transition: 0.2s background-color ease;
+
+    &:hover {
+        background-color: $c-primary;
+    }
+
+    &--addiction { background-image: url('./addiction.png') }
+    &--alco      { background-image: url('./alco.png') }
+    &--gambling  { background-image: url('./gambling.png') }
+
+    @media screen and (max-width: 423px) {
+        width: 200px;
+    }
+
+    @include minimum-for('desktop') {
+        width: 200px;
+    }
+}

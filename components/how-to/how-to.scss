@@ -1,0 +1,45 @@
+.how-to {
+    padding: 4.44% 4.1%;
+    color: $c-text-on-primary;
+    background-color: $c-primary--dark;
+    border-radius: 3px;
+
+    &--single {
+        background-image: url('./background.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.how-to__heading {
+    display: block;
+    margin-bottom: 32px;
+    font-family: $serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.2;
+
+    @include minimum-for('tablet') { font-size: 26px }
+    @include minimum-for('desktop') { font-size: 32px }
+}
+
+.how-to__text {
+    font-size: 18px;
+}
+
+.how-to__list {
+    margin: 32px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.how-to__item {
+    margin-bottom: 16px;
+    padding-left: 36px;
+    font-size: 21px;
+    font-weight: bold;
+    background-image: url('./li-item.png');
+    background-position: left 8px;
+    background-repeat: no-repeat;
+}

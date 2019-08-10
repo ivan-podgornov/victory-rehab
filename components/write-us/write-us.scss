@@ -1,0 +1,29 @@
+.write-us {
+    color: #FFF;
+    padding: 40px 16px;
+    background-color: #574442;
+    background-image: url('./speech-bubble.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+
+    @include minimum-for('mobile') {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    @include minimum-for('tablet') {
+        padding: 4.5%;
+    }
+}
+
+.write-us__heading {
+    margin-bottom: 32px;
+    font-family: $serif;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+
+    @include minimum-for('desktop') { font-size: 32px }
+}

@@ -1,0 +1,102 @@
+.course-results__content {
+    @include only-for('small-tablet') {
+        display: grid !important;
+        grid-column-gap: 4%;
+        grid-template-areas:
+            'heading heading'
+            'intro   how-to'
+            'text    text';
+
+        .course-results__heading,
+        .column--4-12,
+        .column--2-12,
+        .column--5-12 {
+            width: 100%;
+        }
+
+        .course-results__heading { grid-area: heading }
+        .column--5-12 { grid-area: how-to }
+        .column--4-12 { grid-area: intro }
+
+        .column--2-12 {
+            display: flex;
+            justify-content: space-between;
+            grid-area: text;
+
+            .course-results__paragraph {
+                width: 48%;
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+.course-results__intro,
+.course-results__list,
+.course-results__paragraph {
+    color: $c-primary-text;
+}
+
+.course-results__heading-text {
+    display: block;
+    max-width: 610px;
+    margin-bottom: 32px;
+}
+
+.course-results__intro {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.course-results__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.course-results__item {
+    margin: 16px 0;
+    padding-left: 52px;
+    background-image: url('./star.svg');
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+}
+
+.course-results__contact {
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    @include maximum-for('mobile') {
+        display: none;
+    }
+}
+
+.course-results__paragraph {
+    @include minimum-for('tablet') {
+        &--small {
+            margin-top: 0;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        &--important {
+            font-style: italic;
+        }
+    }
+}
+
+.course-results__how-to {
+    @include maximum-for('mobile') {
+        margin: 16px 0;
+    }
+
+    @include only-for('small-tablet') {
+        max-height: 350px;
+
+        .how-to__item {
+            font-size: 16px;
+        }
+    }
+}

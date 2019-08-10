@@ -6,7 +6,7 @@ import SiteMenu from '../site-menu/site-menu';
 
 export default function PageHeader() {
     return (
-        <header className="page-header">
+        <header className="page-header" id="page-header">
             <LayoutPositioner className="page-header__content">
                 <BrandLogo />
                 <MenuToggler />

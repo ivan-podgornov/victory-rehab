@@ -21,6 +21,7 @@ export default function SiteMenu(props) {
                         <a className="site-menu__link" href="/">Контакты</a>
                     </li>
                 </ul>
+                <label className="site-menu__hider" htmlFor="site-menu" aria-hidden="true"></label>
             </nav>
         </React.Fragment>
     );
