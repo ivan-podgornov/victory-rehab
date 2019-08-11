@@ -1,9 +1,9 @@
 import './why-we.scss';
 
-export default function WhyWe() {
+export default function WhyWe(props) {
     return (
         <ul
-            className="why-we column__container column__container--skip-heading_2"
+            className={classnames('why-we column__container column__container--skip-heading_2', props.className)}
             aria-label="Почему мы"
         >
             <li className="why-we__item why-we__item--years">

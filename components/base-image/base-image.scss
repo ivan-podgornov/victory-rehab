@@ -1,0 +1,19 @@
+.base-image {
+    margin-bottom: 16px;
+
+    @include minimum-for('small-tablet') { margin-bottom: 32px }
+    @include minimum-for('desktop')      { margin-bottom: 48px }
+
+    &:not(:first-child) {
+        margin-top: 16px;
+
+        @include minimum-for('small-tablet') { margin-top: 32px }
+        @include minimum-for('desktop')      { margin-top: 48px }
+    }
+}
+
+.base-image__image {
+    display: block;
+    max-width: 100%;
+    border-radius: 3px;
+}

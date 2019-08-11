@@ -15,6 +15,10 @@
     @include minimum-for('tablet') {
         padding: 4.5%;
     }
+
+    .text-field__input {
+        margin-top: -20px;
+    }
 }
 
 .write-us__heading {

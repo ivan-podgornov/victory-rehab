@@ -8,6 +8,23 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
+    &--small {
+        margin: 0;
+
+        @include minimum-for('small-tablet') {
+            .why-we__item {
+                padding-top: 12%;
+                color: $c-primary-text;
+                font-size: 13px;
+                background-color: transparent;
+                background-position-y: top;
+                border-bottom: none;
+                box-shadow: none !important;
+                outline: none;
+            }
+        }
+    }
 }
 
 .why-we__item {

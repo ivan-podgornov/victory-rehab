@@ -7,13 +7,25 @@ import LayoutPositioner from '../layout-positioner/layout-positioner';
  * @param {React.Props} props
  * @param {String} [props.heading]
  * @param {Number} [props.headingLevel = 1]
+ * @param {String} [props.headingTag = 'h1']
+ * @param {String} [props.headingClassName]
  */
 export default function PagePromo(props) {
+    const classes = [
+        'page-promo__heading',
+        `page-promo__heading--${props.headingLevel || '1'}`,
+        props.headingClassName,
+    ]
+
     return (
-        <div className="page-promo">
-            <LayoutPositioner>
+        <div className={classnames('page-promo', props.className)}>
+            <LayoutPositioner className="page-promo__content">
                 {typeof props.heading === 'string' && (
-                    <Heading level={props.headingLevel || 1}>
+                    <Heading
+                        level={props.headingLevel || 1}
+                        className={classnames(...classes)}
+                        tag={props.headingTag || 'h1'}
+                    >
                         {props.heading}
                     </Heading>
                 )}

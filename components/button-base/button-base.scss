@@ -17,4 +17,22 @@
     &:hover {
         background-color: $c-primary;
     }
+
+    &--inline {
+        padding-left: 0;
+        padding-right: 24px;
+        color: $c-text-on-secondary;
+        font-size: 13px;
+        font-weight: 900;
+        text-transform: uppercase;
+        background-color: transparent !important;
+        background-image: url('./arrow-right.png');
+        background-position: calc(100% - 8px) center;
+        background-repeat: no-repeat;
+        transition: 0.2s background-position-x linear;
+
+        &:hover {
+            background-position-x: 100%;
+        }
+    }
 }

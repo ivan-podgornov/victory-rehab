@@ -1,0 +1,17 @@
+.usage-effects {
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    padding-left: 40px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 32px;
+
+    @include minimum-for('desktop') {
+        padding-left: 80px;
+        background-size: 48px;
+    }
+
+    &--addiction { background-image: url('./addiction.png') }
+    &--alcohol   { background-image: url('./alcohol.png') }
+    &--gambling  { background-image: url('./gambling.png') }
+}

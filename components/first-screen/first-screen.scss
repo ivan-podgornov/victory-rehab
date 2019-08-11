@@ -14,18 +14,6 @@
     text-transform: uppercase;
 }
 
-.first-screen__heading {
-    margin: 0 !important;
-    padding: 0 !important;
-    color: $c-text-on-primary;
-    font-size: 42px;
-    line-height: 1.045;
-
-    @include minimum-for('small-tablet') { font-size: 50px !important }
-    @include minimum-for('tablet') { font-size: 75px !important }
-    @include minimum-for('desktop') { font-size: 100px !important }
-}
-
 .first-screen__sub-heading {
     margin: 0 !important;
     color: $c-primary;

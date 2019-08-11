@@ -1,0 +1,63 @@
+.treatment-addiction {
+    color: $c-primary-text;
+    font-size: 15px;
+    line-height: 1.5;
+
+    @include minimum-for('small-tablet') { font-size: 16px; }
+    @include minimum-for('desktop')      { font-size: 18px; }
+
+    @include maximum-for('mobile') {
+        .base-image { width: 48% }
+
+        .article-section:nth-of-type(1) .column:nth-of-type(2) .base-image {
+            margin: calc(-46.5% - 16px) 0 16px auto;
+        }
+
+        .article-section:nth-of-type(1) .column:last-of-type {
+            margin-top: 0;
+        }
+    }
+
+    .heading--2 {
+        margin-bottom: 32px;
+        color: #333;
+
+        @include minimum-for('desktop') {
+            margin-bottom: 64px;
+        }
+    }
+
+    p {
+        margin: 16px 0;
+    }
+
+    li:not([class]) {
+        margin-bottom: 12px;
+        padding-left: 24px;
+        font-size: 16px;
+        list-style-type: none;
+        background-image: url('./arrow-right.png');
+        background-position: left 4px;
+        background-repeat: no-repeat;
+    }
+}
+
+.treatment-addiction__list {
+    margin-left: 0;
+    padding: 0;
+}
+
+.treatment-addiction__dark {
+    color: $c-text-on-primary;
+    background-image: url('./dark-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .heading--2 {
+        color: inherit;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}

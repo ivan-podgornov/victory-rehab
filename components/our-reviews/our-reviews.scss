@@ -1,0 +1,30 @@
+.our-reviews__list {
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.our-reviews__item {
+    margin-bottom: 32px;
+    padding: 130px 32px 48px;
+    color: $c-text-on-secondary;
+    text-align: center;
+    background-color: $c-secondary;
+    background-image: url('./quotes.png');
+    background-position: center 60px;
+    background-repeat: no-repeat;
+    border-bottom: 5px solid $c-primary;
+}
+
+.our-reviews__text {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.our-reviews__author {
+    display: block;
+    margin: 32px 0;
+    font-size: 18px;
+    font-weight: 900;
+}

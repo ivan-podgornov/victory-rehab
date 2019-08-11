@@ -1,0 +1,15 @@
+.review-propose__container {
+    background-image: url('../treatment-addiction/dark-background.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.review-propose__heading {
+    margin-bottom: 32px;
+    color: $c-text-on-primary;
+
+    @include minimum-for('tablet') {
+        margin-bottom: 48px;
+    }
+}

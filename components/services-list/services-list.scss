@@ -5,6 +5,12 @@
     list-style-type: none;
     text-align: center;
 
+    @include minimum-for('desktop') {
+        &--right-aligned {
+            text-align: right;
+        }
+    }
+
     @include maximum-for('mobile') {
         padding-top: 4%;
         padding-bottom: 4%;

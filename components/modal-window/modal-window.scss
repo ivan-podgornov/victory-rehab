@@ -1,0 +1,62 @@
+.modal-window {
+    overscroll-behavior: contain;
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 24;
+    background-color: rgba(#000, 0.65);
+    transition: 0.2s opacity ease;
+    opacity: 1;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none; 
+    }
+}
+
+.modal-window__heading {
+    color: #58b32b;
+}
+
+.modal-window__content {
+    min-width: 300px;
+    max-width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $c-secondary;
+    border: 7px solid $c-primary--dark;
+
+    @include maximum-for('mobile') {
+        width: 90%;
+    }
+
+    & > div {
+        padding: 32px 16px;
+        z-index: 2;
+        cursor: auto;
+
+        @include minimum-for('tablet') {
+            padding: 3.33%;
+        }
+    }
+}
+
+.modal-window__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.modal-window__toggler,
+.modal-window__toggler:not(:checked) + .modal-window {
+    @include visually-hidden;
+    opacity: 0;
+}

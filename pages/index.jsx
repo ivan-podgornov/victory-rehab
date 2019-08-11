@@ -13,7 +13,7 @@ import WhyWe from '../components/why-we/why-we';
 export default function PageIndex() {
     return (
         <DefaultLayout>
-            <PagePromo><FirstScreen /></PagePromo>
+            <PagePromo className="page-promo--block"><FirstScreen /></PagePromo>
             <article>
                 <ArticleSection className="article-section--light-blue">
                     <LayoutPositioner>

@@ -7,7 +7,7 @@ export default function PageFooter() {
             <LayoutPositioner className="page-footer__content">
                 <span>
                     © РЦ Виктори, 2017-2019 / Разработка и поддержка:{' '}
-                    <a className="page-footer__link" href="vk.com/id131691940">Иван Подгорнов</a>
+                    <a className="page-footer__link" href="https://vk.com/id131691940">Иван Подгорнов</a>
                 </span>
                 <a
                     className="page-footer__scroll-top"

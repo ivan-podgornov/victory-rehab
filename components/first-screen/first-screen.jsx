@@ -6,7 +6,7 @@ import ServicesList from '../services-list/services-list';
 export default function FirstScreen() {
     return (
         <div className="first-screen">
-            <Heading className="first-screen__heading" tag="div" level={1}>Victory</Heading>
+            <Heading className="page-promo__heading page-promo__heading--1" tag="div" level={1}>Victory</Heading>
             <Heading className="first-screen__sub-heading" tag="div" level={2}>
                 Реабилитационный центр
             </Heading>
