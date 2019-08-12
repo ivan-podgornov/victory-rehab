@@ -9,7 +9,7 @@ export default function ServicesList(props) {
             <li className="services-list__item">
                 <a
                     className="services-list__link services-list__link--addiction"
-                    href="/lechenie-narkomanii"
+                    href="/lechenie-narkomanii.html"
                 >
                     Лечение наркомании
                 </a>
@@ -17,7 +17,7 @@ export default function ServicesList(props) {
             <li className="services-list__item">
                 <a
                     className="services-list__link services-list__link--alco"
-                    href="/lechenie-alkogolizma"
+                    href="/lechenie-alkogolizma.html"
                 >
                     Лечение алкоголизма
                 </a>
@@ -25,7 +25,7 @@ export default function ServicesList(props) {
             <li className="services-list__item">
                 <a
                     className="services-list__link services-list__link--gambling"
-                    href="/lechenie-igromanii"
+                    href="/lechenie-igromanii.html"
                 >
                     Лечение игромании
                 </a>
