@@ -9,16 +9,16 @@ export default function SiteMenu(props) {
                         <a className="site-menu__link" href="/">Главная</a>
                     </li>
                     <li className="site-menu__item">
-                        <a className="site-menu__link" href="/">Наши услуги</a>
+                        <a className="site-menu__link" href="/lechenie-narkomanii">Наши услуги</a>
                     </li>
                     <li className="site-menu__item">
-                        <a className="site-menu__link" href="/">О нас</a>
+                        <a className="site-menu__link" href="/about">О нас</a>
                     </li>
                     <li className="site-menu__item">
-                        <a className="site-menu__link" href="/">Отзывы</a>
+                        <a className="site-menu__link" href="/reviews">Отзывы</a>
                     </li>
                     <li className="site-menu__item">
-                        <a className="site-menu__link" href="/">Контакты</a>
+                        <a className="site-menu__link" href="/contacts">Контакты</a>
                     </li>
                 </ul>
                 <label className="site-menu__hider" htmlFor="site-menu" aria-hidden="true"></label>

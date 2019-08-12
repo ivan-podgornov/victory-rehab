@@ -5,7 +5,7 @@ export default function BaseImage(props) {
     if ('src' in props === false) throw new TypeError('alt is required for content images');
 
     return (
-        <div className="base-image">
+        <div className={classnames('base-image', props.className)}>
             <img className="base-image__image" src={props.src} alt={props.alt} />
         </div>
     );

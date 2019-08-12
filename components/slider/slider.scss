@@ -1,0 +1,105 @@
+.slider {
+    position: relative;
+
+    &::selection {
+        background-color: transparent;
+    }
+}
+
+.slider__list {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slider__item {
+    flex-shrink: 0;
+    width: 30%;
+    position: relative;
+    left: 0;
+    list-style-type: none;
+    transition: 0.5s left linear;
+
+    &:not(:last-child) {
+        margin-right: 3.3333%;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        padding-top: 72%;
+    }
+}
+
+.slider__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    img {
+        min-height: 100%;
+        max-height: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+.slider__labels {
+    font-size: 0;
+    text-align: center;
+}
+
+.slider__label {
+    &:before,
+    &:after {
+        content: '';
+        display: none;
+        height: 48px;
+        width: 48px;
+        margin: auto 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-image: url('./arrow.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 16px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        right: 0;
+        transform: rotate(180deg);
+    }
+
+    &:nth-last-of-type(3) ~ .slider__label {
+        display: none;
+    }
+}
+
+.slider__input {
+    @include visually-hidden;
+
+    @for $i from 1 through 23 {
+        &:nth-of-type(#{$i}):checked {
+            & ~ .slider__list .slider__item {
+                left: -($i * 33.3333% - 33.3333%);
+            }
+
+            & ~ .slider__labels .slider__label:nth-of-type(#{$i - 1}):before,
+            & ~ .slider__labels .slider__label:nth-of-type(#{$i + 1}):after {
+                display: block;
+            }
+        }
+    }
+}

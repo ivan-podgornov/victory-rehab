@@ -6,7 +6,7 @@ export default function PageContacts() {
     return (
         <DefaultLayout>
             <PagePromo heading="Контакты" headingLevel="2" headingTag="h1" />
-            <OurContacts />
+            <OurContacts heading="Реабилитационный центр «Виктори»" />
         </DefaultLayout>
     );
 };

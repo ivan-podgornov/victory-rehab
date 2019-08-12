@@ -1,9 +1,11 @@
 import './article-section.scss';
 
 export default function ArticleSection(props) {
+    const Tag = props.tag || 'div';
+
     return (
-        <div className={classnames('article-section', props.className)}>
+        <Tag className={classnames('article-section', props.className)}>
             {props.children}
-        </div>
+        </Tag>
     );
 };
