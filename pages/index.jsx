@@ -1,3 +1,4 @@
+import Head from '@termite/components/head/head';
 import ArticleSection from '../components/article-section/article-section';
 import ButtonBase from '../components/button-base/button-base';
 import CourceResults from '../components/course-results/course-results';
@@ -13,6 +14,9 @@ import WhyWe from '../components/why-we/why-we';
 export default function PageIndex() {
     return (
         <DefaultLayout>
+            <Head>
+                <title>«Виктори» - лечение зависимости в Луганске</title>
+            </Head>
             <PagePromo className="page-promo--block"><FirstScreen /></PagePromo>
             <article>
                 <ArticleSection className="article-section--light-blue">

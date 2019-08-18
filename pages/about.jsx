@@ -1,3 +1,4 @@
+import Head from '@termite/components/head/head';
 import ArticleSection from '../components/article-section/article-section';
 import DefaultLayout from '../layouts/default-layout/default-layout';
 import Heading from '../components/heading/heading';
@@ -10,6 +11,9 @@ import Slider from '../components/slider/slider';
 export default function PageAbout() {
     return (
         <DefaultLayout>
+            <Head>
+                <title>О нашем центре</title>
+            </Head>
             <PagePromo heading="О нашем центре" headingLevel="2" headingTag="div" />
             <article>
                 <ArticleSection>

@@ -1,3 +1,4 @@
+import Head from '@termite/components/head/head';
 import ArticleSection from '../components/article-section/article-section';
 import ButtonBase from '../components/button-base/button-base';
 import BaseImage from '../components/base-image/base-image';
@@ -15,6 +16,9 @@ import WhyWe from '../components/why-we/why-we';
 export default function PageLechenieIgromanii() {
     return (
         <DefaultLayout>
+            <Head>
+                <title>Лечение игромании в Луганске</title>
+            </Head>
             <PagePromo heading="Наши услуги" headingLevel="2" headingTag="div">
                 <ServicesList className="column column--8-12 services-list--right-aligned" />
             </PagePromo>
