@@ -6,6 +6,6 @@
     "dev": "termite"
   },
   "dependencies": {
-    "@termite/cli": "^2.0.9"
+    "@termite/cli": "^2.0.10"
   }
 }

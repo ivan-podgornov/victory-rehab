@@ -9,7 +9,7 @@ export default function Slider(props) {
             {labels.map((number) => <ReviewInput key={number} number={number} />)}
             <ul className="slider__list">
                 {props.items.map((item, i) => (
-                    <li className="slider__item" key="i">
+                    <li className="slider__item" key={i}>
                         <BaseImage
                             className="slider__image"
                             alt={`Наши фото, фотография ${i + 1}`}

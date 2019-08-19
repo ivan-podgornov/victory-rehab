@@ -7,6 +7,7 @@ import OurContacts from '../components/our-contacts/our-contacts';
 import OurPrices from '../components/our-prices/our-prices';
 import PagePromo from '../components/page-promo/page-promo';
 import Slider from '../components/slider/slider';
+import WhatWeUse from '../components/what-we-use/what-we-use';
 
 export default function PageAbout() {
     return (
@@ -78,6 +79,7 @@ export default function PageAbout() {
                         </section>
                     </LayoutPositioner>
                 </ArticleSection>
+                <WhatWeUse />
                 <OurPrices />
             </article>
             <OurContacts />
