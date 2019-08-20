@@ -6,6 +6,7 @@ import LayoutPositioner from '../components/layout-positioner/layout-positioner'
 import OurContacts from '../components/our-contacts/our-contacts';
 import OurPrices from '../components/our-prices/our-prices';
 import PagePromo from '../components/page-promo/page-promo';
+import RegimePromo from '../components/regime-promo/regime-promo';
 import Slider from '../components/slider/slider';
 import WhatWeUse from '../components/what-we-use/what-we-use';
 
@@ -80,6 +81,7 @@ export default function PageAbout() {
                     </LayoutPositioner>
                 </ArticleSection>
                 <WhatWeUse />
+                <RegimePromo />
                 <OurPrices />
             </article>
             <OurContacts />

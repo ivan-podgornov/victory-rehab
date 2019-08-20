@@ -1,0 +1,55 @@
+.regime-promo__promo {
+    position: relative;
+
+    @include minimum-for('tablet') {
+        &:after {
+            content: '';
+            height: 52px;
+            width: 254px;
+            position: absolute;
+            bottom: 4%;
+            right: -24%;
+            background-image: url('./arrow.png');
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    @include minimum-for('desktop') {
+        &:after {
+            bottom: 8%;
+        }
+    }
+}
+
+.regime-promo__paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+
+    @include minimum-for('tablet') {
+        &--letter {
+            &:before {
+                content: '';
+                float: left;
+                display: block;
+                height: 110px;
+                width: 110px;
+                margin-right: 16px;
+                background-image: url('./letter.png');
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        
+            &:after {
+                content: '';
+                display: table;
+                clear: both;
+                zoom: 1;
+            }
+        }
+    }
+}
+
+.regime-promo__call {
+    margin-top: 20px;
+}

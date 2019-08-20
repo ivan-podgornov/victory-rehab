@@ -1,0 +1,144 @@
+.regime-daily {
+    margin-left: auto;
+    max-width: 370px;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0 3px 5px rgba(#000, 0.1);
+
+    @include maximum-for('mobile') {
+        margin-top: 32px;
+        margin-right: auto;
+    }
+
+    &:before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url('./alarm-clock.png');
+        background-position: left center;
+        background-repeat: no-repeat;
+        z-index: -1;
+
+        @include minimum-for('mobile') {
+            left: -50%;
+        }
+    }
+}
+
+.regime-daily__day {
+    overflow: hidden;
+    padding: 0 0 0 84px;
+    line-height: 80px;
+    font-size: 25px;
+    font-weight: 900;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background-color: $c-secondary;
+    background-image: url('./clock.png');
+    background-position: 28px center;
+    background-repeat: no-repeat;
+}
+
+.regime-daily__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include minimum-for('mobile') {
+        background-color: #FFF;
+    }
+}
+
+.regime-daily__item {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 6px 16px 6px 0;
+    color: $c-primary-text;
+    font-size: 15px;
+    transition: 0.2s linear;
+    transition-property: max-height, padding, border-width;
+
+    &:not(:last-of-type) {
+        border-bottom: 1px solid $c-secondary;
+    }
+
+    &:last-of-type {
+        padding-bottom: 16px;
+    }
+}
+
+.regime-daily__time {
+    flex-shrink: 0;
+    width: 90px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.regime-daily__from,
+.regime-daily__to {
+    display: block;
+}
+
+.regime-daily__to:before {
+    content: '-';
+}
+
+.regime-daily__toggler {
+    @include visually-hidden;
+}
+
+.regime-daily__toggler:not(:checked) {
+    & ~ .regime-daily__list .regime-daily__item:nth-of-type(11) {
+        @extend .regime-daily__item:last-of-type;
+    }
+
+    & ~ .regime-daily__list .regime-daily__item:nth-of-type(11) ~ .regime-daily__item {
+        height: 100%;
+        max-height: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 0px;
+        border-bottom-width: 0px;
+    }
+
+    & ~ .regime-daily__show:before {
+        transform: rotate(90deg);
+    }
+}
+
+.regime-daily__show {
+    height: 24px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: inherit;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+
+    &:before {
+        content: '»';
+        height: 28px;
+        width: 28px;
+        margin: 0 auto;
+        position: absolute;
+        bottom: -14px;
+        left: -14px;
+        right: 0;
+        color: #777;
+        line-height: 25px;
+        text-align: center;
+        background-color: $c-secondary;
+        border: 1px solid #777;
+        border-radius: 50%;
+        transform: rotate(-90deg);
+        transform-origin: center;
+        transition: 0.4s transform linear;
+        cursor: pointer;
+    }
+}
