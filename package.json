@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "author": "ivan-podgornov",
   "scripts": {
+    "build": "cross-env NODE_ENV=production termite --prerender --extract-react",
     "dev": "termite"
   },
   "dependencies": {
     "@termite/cli": "^2.0.10"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
   }
 }
