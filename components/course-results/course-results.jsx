@@ -35,7 +35,7 @@ export default function CourseResults(props) {
                             {' '}плана выздоровления.
                         </li>
                     </ul>
-                    <ButtonBase className="column course-results__contact" href="/contacts" tag="a">
+                    <ButtonBase className="column course-results__contact" href="/contacts.html" tag="a">
                         Связаться с нами
                     </ButtonBase>
                 </section>

@@ -15,7 +15,7 @@ export default function FirstScreen() {
                 Мы предоставляем услуги лечения зависимостей путём психологической работы,
                 социальной адаптации и применения принципов программы «12 шагов»
             </div>
-            <ButtonBase className="first-screen__call-us" href="/contacts" tag="a">
+            <ButtonBase className="first-screen__call-us" href="/contacts.html" tag="a">
                 Связаться с нами
             </ButtonBase>
         </div>

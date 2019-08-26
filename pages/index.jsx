@@ -51,7 +51,7 @@ export default function PageIndex() {
                             </p>
                         </section>
                         <section className="column__container column__container--skip-heading_2">
-                            <ButtonBase tag="a" href="/lechenie-narkomanii">
+                            <ButtonBase tag="a" href="/lechenie-narkomanii.html">
                                 Узнать больше
                             </ButtonBase>
                         </section>

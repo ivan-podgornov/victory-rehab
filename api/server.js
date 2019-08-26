@@ -18,6 +18,10 @@ import { connect } from './database';
         graphiql: process.env.NODE_ENV,
     })));
 
-    server.use(await termite({ mode: process.env.NODE_ENV }));
+    server.use(await termite({
+        extractReact: true,
+        mode: process.env.NODE_ENV,
+    }));
+
     server.listen(3000, () => console.log('server is listening on port 3000'));
 })();

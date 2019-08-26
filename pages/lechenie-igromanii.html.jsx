@@ -122,7 +122,7 @@ export default function PageLechenieIgromanii() {
                                     <li>Помочь ему стать полноценной частичкой общества;</li>
                                     <li>Помочь избегать срывов в будущем;</li>
                                 </ul>
-                                <ButtonBase className="button-base--inline" tag="a" href="/contacts">
+                                <ButtonBase className="button-base--inline" tag="a" href="/contacts.html">
                                     Связаться с нами
                                 </ButtonBase>
                             </ImportantText>

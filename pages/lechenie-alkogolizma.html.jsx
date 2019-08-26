@@ -123,7 +123,7 @@ export default function PageLechenieAlkogolizma() {
                                     проявления болезни и умел составить план действий для своего
                                     выздоровления.
                                 </p>
-                                <ButtonBase className="button-base--inline" tag="a" href="/contacts">
+                                <ButtonBase className="button-base--inline" tag="a" href="/contacts.html">
                                     Связаться с нами
                                 </ButtonBase>
                             </ImportantText>

@@ -132,7 +132,7 @@ export default function PageLechenieNarkomanii() {
                                     <li>Наладить взаимоотношения в семье и на работе;</li>
                                     <li>Навсегда побороть зависимость.</li>
                                 </ul>
-                                <ButtonBase className="button-base--inline" tag="a" href="/contacts">
+                                <ButtonBase className="button-base--inline" tag="a" href="/contacts.html">
                                     Связаться с нами
                                 </ButtonBase>
                             </ImportantText>
