@@ -1,9 +1,23 @@
-document.addEventListener('submit', (event) => {
-    event.preventDefault();
+import sendSms from '../../assets/javascript/send-sms';
 
-    if (event.target.closest('.review-propose')) {
-        return alert('Спасибо! Ваш отзыв будет добавлен после проверки администратором');
+class WriteUs {
+    /**
+     * @constructor
+     * @param {HTMLFormElement} element
+     */
+    constructor(element) {
+        element.addEventListener('submit', this.OnSubmit.bind(this));
     }
 
-    alert('Спасибо! Мы ответим в ближайшее время');
-});
+    async OnSubmit(event) {
+        event.preventDefault();
+        const name = event.target.elements['variables[name]'].value;
+        const phone = event.target.elements['variables[phone]'].value;
+        const text = event.target.elements['variables[text]'].value;
+        const result = await sendSms({ name, phone, text });
+        alert(result);
+    }
+}
+
+[...document.querySelectorAll('.write-us')]
+    .forEach((element) => new WriteUs(element));

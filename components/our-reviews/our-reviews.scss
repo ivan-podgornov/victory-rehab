@@ -1,5 +1,6 @@
 .our-reviews__list {
     align-items: flex-start;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -8,6 +9,7 @@
 .our-reviews__item {
     margin-bottom: 32px;
     padding: 130px 32px 48px;
+    position: relative;
     color: $c-text-on-secondary;
     text-align: center;
     background-color: $c-secondary;
@@ -15,6 +17,22 @@
     background-position: center 60px;
     background-repeat: no-repeat;
     border-bottom: 5px solid $c-primary;
+
+    @include minimum-for('mobile') {
+        &:nth-of-type(2n - 1) {
+            margin-right: 4%;
+        }
+    }
+
+    @include minimum-for('tablet') {
+        &:nth-of-type(2n - 1) {
+            margin-right: 0;
+        }
+
+        &:not(:nth-of-type(4n)) {
+            margin-right: 1.92%;
+        }
+    }
 }
 
 .our-reviews__text {
@@ -27,4 +45,69 @@
     margin: 32px 0;
     font-size: 18px;
     font-weight: 900;
+}
+
+.our-reviews__add-more {
+    display: block;
+    margin: 8px auto;
+    padding: 8px 16px;
+    padding-bottom: 1.5em;
+    position: relative;
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: 0.2s ease;
+    transition-property: background-color, color;
+    cursor: pointer;
+
+    &:after {
+        content: '>';
+        height: 1em;
+        width: 1em;
+        margin: auto;
+        position: absolute;
+        bottom: 0.25em;
+        left: 0;
+        right: 0;
+        font-family: 'Consolas', monospace;
+        line-height: 1;
+        transform: rotate(90deg);
+    }
+
+    &:hover {
+        color: $c-text-on-primary;
+        background-color: $c-primary--dark;
+        border-radius: 3px;
+    }
+}
+
+.our-reviews__approve {
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    top: 8px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    transition: 0.2s ease;
+    transition-property: background-color;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $c-primary;
+    }
+
+    &--ok {
+        left: 8px;
+        background-image: url('./ok.svg');
+    }
+
+    &--close {
+        right: 8px;
+        background-image: url('./close.svg');
+    }
 }

@@ -17,6 +17,10 @@
     cursor: pointer;
 
     &--dark {
+        .text-field__input {
+            color: #333;
+        }
+
         .text-field__input:hover,
         .text-field__input:focus,
         .text-field__label:hover {

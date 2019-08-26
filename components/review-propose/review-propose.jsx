@@ -15,12 +15,12 @@ export default function ReviewPropose() {
                 </Heading>
                 <ButtonBase tag="label" htmlFor="review-propose">Оставить отзыв</ButtonBase>
                 <ModalWindow name="review-propose" heading="Оставить отзыв">
-                    <form className="column__container column__container--space-between" action="#" method="POST">
-                        <TextField className="text-field--dark column column--6-12" label="Имя" name="name" type="text" />
-                        <TextField className="text-field--dark column column--6-12" label="Телефон" name="phone" type="tel" />
-                        <TextField className="text-field--dark column column--6-12" label="Ваша почта" name="email" type="text" />
-                        <TextField className="text-field--dark column column--6-12" label="Город" name="city" type="text" />
-                        <TextField className="text-field--dark column" label="Сообщение" name="message" rows="4" />
+                    <form className="column__container column__container--space-between review-propose__form" action="/api" method="POST">
+                        <input type="hidden" name="query" value="mutation($name: String!, $phone: String!, $text: String!) { createReview(name: $name, phone: $phone, text: $text) }" />
+                        <input type="hidden" name="operationType" value="createReview" />
+                        <TextField className="text-field--dark column column--6-12" label="Имя" name="variables[name]" type="text" />
+                        <TextField className="text-field--dark column column--6-12" label="Телефон" name="variables[phone]" type="tel" />
+                        <TextField className="text-field--dark column" label="Сообщение" name="variables[text]" rows="4" />
                         <ButtonBase className="column" type="submit">Отправить</ButtonBase>
                     </form>
                 </ModalWindow>
