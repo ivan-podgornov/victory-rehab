@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import graphqlHttp from 'express-graphql';
 import termite from '@termite/middleware';
+import seoRedirects from './seo-redirects';
 import schema from './schema';
 import { connect } from './database';
 
@@ -9,6 +10,7 @@ import { connect } from './database';
     await connect();
     const server = express();
 
+    server.use(seoRedirects);
     server.use(bodyParser.urlencoded({ extended: true }));
     server.use(bodyParser.json());
 
