@@ -1,6 +1,6 @@
 User-agent: *
-Host: https://www.victory-rehab.ru/
+Host: https://victory-rehab.ru/
 Disallow: /about.html
 Disallow: /reviews.html
 Disallow: /contacts.html
-Sitemap: https://www.victory-rehab.ru/sitemap.xml
+Sitemap: https://victory-rehab.ru/sitemap.xml
