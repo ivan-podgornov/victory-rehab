@@ -8,8 +8,7 @@
     "clean": "rimraf ./dest/",
     "prestart": "npm run-script clean && npm run-script build",
     "start": "cross-env NODE_ENV=development node ./dest/server.js",
-    "production": "npm run-script prestart && cross-env NODE_ENV=production pm2 start ./dest/server.js --watch --ignore-watch ./public/",
-    "restart": "pm2 restart server"
+    "production": "npm run-script prestart && pm2 start ./ecosystem.json"
   },
   "dependencies": {
     "@hot-loader/react-dom": "^16.9.0",

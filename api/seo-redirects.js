@@ -1,3 +1,5 @@
+import path from 'path';
+
 /**
  * Seo Redirects
  * @param {Request} req
@@ -5,21 +7,15 @@
  * @param {Function} next
  */
 export default function seoRedirects(req, res, next) {
-    if (['/index.html', 'index.php', 'index'].includes(req.url)) {
-        res.redirect(301, req.headers.host);
-        return;
-    }
+    const host = req.headers.host;
+    const extension = req.url === '/' ? '/' : path.extname(req.url) || '.html';
+    const url = req.url === '/' ? '' : req.url.replace(new RegExp('\\' + extension + '$'), '');
+    const protocol = /^https?/.test(host) ? '' : 'http://';
 
-    const url = (req.url === '/') ? '' : req.url;
-    const startUrl = req.headers.host + url;
+    if (extension !== '.html' || process.env.NODE_ENV === 'development') return next();
 
-    const resultUrl = 'https://'
-        + req.headers.host.replace('www.', '')
-        + url.replace(/\/$/, '');
-
-    if (startUrl !== resultUrl.slice('https://'.length)) {
-        res.redirect(301, resultUrl);
-        return;
+    if ((req.headers.host + req.url) !== (host + url + extension)) {
+        return res.redirect(301, protocol + host + url + extension);
     }
 
     next();

@@ -1,0 +1,11 @@
+{
+    "apps": [{
+        "name": "victory-rehab",
+        "script": "./dest/server.js",
+        "watch": true,
+        "ignore_watch": ["node_modules", "public", "dest"],
+        "env": {
+            "NODE_ENV": "production"
+        }
+    }]
+}
