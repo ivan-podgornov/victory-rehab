@@ -5,7 +5,7 @@ import LayoutPositioner from '../layout-positioner/layout-positioner';
 
 export default function ReviewsPreview() {
     return (
-        <ArticleSection className="article-section--dark-primary reviews-preview">
+        <ArticleSection className="article-section--dark-primary reviews-preview" tag="noindex" style="display: block;">
             <LayoutPositioner className="reviews-preview__content">
                 <Heading level={2}>Измененные жизни</Heading>
                 {[1, 2, 3].map((number, i) => <ReviewInput key={i} number={number} />)}
