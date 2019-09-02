@@ -1,0 +1,39 @@
+.our-team {
+    margin: 20px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.our-team__person {
+    display: block;
+    margin-bottom: 16px;
+    padding-left: 40px;
+    position: relative;
+    color: #FFF;
+    text-decoration: none;
+
+    &:before {
+        content: attr(data-initial) '';
+        display: block;
+        height: 32px;
+        width: 32px;
+        position: absolute;
+        top: 4px;
+        left: 0;
+        color: #FFF;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 32px;
+        text-align: center;
+        border: 1px solid #FFF;
+    }
+}
+
+.our-team__profession,
+.our-team__name {
+    display: block;
+}
+
+.our-team__name {
+    text-transform: uppercase;
+}

@@ -1,7 +1,9 @@
 import './our-contacts.scss';
 import ArticleSection from '../article-section/article-section';
+import ContactPhones from '../contact-phones/contact-phones';
 import Heading from '../heading/heading';
 import LayoutPositioner from '../layout-positioner/layout-positioner';
+import OurAddress from '../our-address/our-address';
 import WriteUs from '../write-us/write-us';
 
 export default function OurContacts(props) {
@@ -17,33 +19,16 @@ export default function OurContacts(props) {
                             </span>
                         )}
                     </Heading>
-                    <ul className="our-contacts__contact our-contacts__contact--tels column__container--skip-heading_1">
-                        <li className="our-contacts__tel-item">
-                            <a className="our-contacts__tel" href="tel:+380508351483">
-                                +38 (050) 835-14-83
-                            </a>
-                        </li>
-                        <li className="our-contacts__tel-item">
-                            <a className="our-contacts__tel" href="tel:+380721043535">
-                                +38 (072) 104-35-35
-                            </a>
-                        </li>
-                        <li className="our-contacts__tel-item">
-                            <a className="our-contacts__tel" href="tel:+380958912910">
-                                +38 (095) 891-29-10
-                            </a>
-                        </li>
-                        <li className="our-contacts__tel-item">
-                            <a className="our-contacts__tel" href="tel:+380721044646">
-                                +38 (072) 104-46-46
-                            </a>
-                        </li>
-                    </ul>
-                    <address className="our-contacts__contact our-contacts__contact--location column__container--skip-heading_1">
-                        91000, г. Луганск<br />
-                        ул. Вознесенская 22<br />
-                        с 9.00 до 18.00, без выходных
-                    </address>
+                    <ContactPhones
+                        className="contact-phones--wide column__container--skip-heading_1"
+                        phones={[
+                            '+38 (050) 835-14-83',
+                            '+38 (072) 104-35-35',
+                            '+38 (095) 891-29-10',
+                            '+38 (072) 104-46-46'
+                        ]}
+                    />
+                    <OurAddress className="our-address--wide column__container--skip-heading_1" />
                 </div>
                 <WriteUs className="column column--4-12 our-contacts__write-us" />
             </LayoutPositioner>
