@@ -9,52 +9,6 @@
     font-size: 19px;
     font-weight: 300;
     list-style-type: none;
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: 24px;
-
-    @include minimum-for('small-tablet') {
-        padding-left: 48px;
-        font-size: 23px;
-        background-size: 32px;
-    }
-
-    @include minimum-for('desktop') {
-        padding-left: 72px;
-        font-size: 27px;
-        background-size: 40px;
-    }
-
-    &--tels {
-        background-image: url('./phone.png');
-
-        @include minimum-for('small-tablet') {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-    }
-
-    &--location {
-        font-style: normal;
-        background-image: url('./location.png');
-    }
-}
-
-.our-contacts__tel {
-    color: inherit;
-    line-height: 1.6;
-    text-decoration: none;
-}
-
-.our-contacts--tels .our-contacts__tel-item {
-    @include minimum-for('small-tablet') {
-        width: 48%;
-
-        &:nth-child(2n) {
-            text-align: right;
-        }
-    }
 }
 
 .our-contacts__write-us {

@@ -1,5 +1,8 @@
 .page-header {
     position: relative;
+    position: sticky;
+    top: 0;
+    transition: 0.2s background-color ease;
     z-index: 1;
 
     &:before {
@@ -21,6 +24,15 @@
     @include minimum-for('desktop') {
         padding-top: 16px;
         padding-bottom: 16px;
+    }
+
+    &--fixed {
+        background-color: #5c4a48;
+
+        @include minimum-for('tablet') {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
     }
 }
 

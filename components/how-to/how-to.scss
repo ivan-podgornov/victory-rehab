@@ -1,6 +1,7 @@
 .how-to {
     padding: 4.44% 4.1%;
     color: $c-text-on-primary;
+    font-size: 18px;
     background-color: $c-primary--dark;
     border-radius: 3px;
 
@@ -10,36 +11,45 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    &--small {
+        padding: 16px 12px;
+        font-size: 15px;
+        background-color: transparent;
+
+        .how-to__heading { margin-bottom: 1em }
+        .how-to__item { background-position-y: 2px }
+    }
 }
 
 .how-to__heading {
     display: block;
-    margin-bottom: 32px;
+    margin-bottom: 1.77em;
     font-family: $serif;
-    font-size: 24px;
+    font-size: 1.33em;
     font-weight: bold;
     line-height: 1.2;
 
-    @include minimum-for('tablet') { font-size: 26px }
-    @include minimum-for('desktop') { font-size: 32px }
+    @include minimum-for('tablet') { font-size: 1.44em }
+    @include minimum-for('desktop') { font-size: 1.77em }
 }
 
 .how-to__text {
-    font-size: 18px;
+    font-size: 1em;
 }
 
 .how-to__list {
-    margin: 32px 0;
+    margin: 1.77em 0;
     padding: 0;
     list-style-type: none;
 }
 
 .how-to__item {
-    margin-bottom: 16px;
-    padding-left: 36px;
-    font-size: 21px;
+    margin-bottom: 0.88em;
+    padding-left: 2em;
+    font-size: 1.16em;
     font-weight: bold;
     background-image: url('./li-item.png');
-    background-position: left 8px;
+    background-position: left 0.44em;
     background-repeat: no-repeat;
 }
