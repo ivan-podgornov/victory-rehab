@@ -4,10 +4,10 @@ export default function OurTeam(props) {
     return (
         <ul className={classnames('our-team', props.className)}>
             <li className="our-team__item">
-                <div className="our-team__person" data-initial="П">
+                <a href="https://freelance.ru/udovletvoritelno" className="our-team__person" data-initial="П">
                     <span className="our-team__profession">Графический дизайнер</span>
                     <span className="our-team__name">Павел Симонов</span>
-                </div>
+                </a>
             </li>
             <li className="our-team__item">
                 <a href="https://vk.com/id131691940" className="our-team__person" data-initial="И">
