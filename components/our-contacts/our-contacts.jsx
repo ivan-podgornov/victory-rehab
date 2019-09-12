@@ -23,9 +23,9 @@ export default function OurContacts(props) {
                         className="contact-phones--wide column__container--skip-heading_1"
                         phones={[
                             '+38 (050) 835-14-83',
-                            '+38 (072) 104-35-35',
-                            '+38 (095) 891-29-10',
-                            '+38 (072) 104-46-46'
+                            '+38 (072) 104-46-46',
+                            '+38 (099) 372-92-78',
+                            '+38 (072) 190-66-90',
                         ]}
                     />
                     <OurAddress className="our-address--wide column__container--skip-heading_1" />

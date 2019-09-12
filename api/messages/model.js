@@ -20,7 +20,7 @@ export default class Message {
      * @returns {Promise<Boolean>}
      */
     static async sendSMS(message) {
-        const to = ['380954530298'];
+        const to = ['380954530298', '380993729278', '380508351483'];
         const response = await fetch('http://sms-fly.com/api/api.noai.php', {
             credentials: 'include',
             method: 'POST',
