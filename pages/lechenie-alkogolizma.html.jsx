@@ -14,10 +14,18 @@ import UsageEffects from '../components/usage-effects/usage-effects';
 import WhyWe from '../components/why-we/why-we';
 
 export default function PageLechenieAlkogolizma() {
+    const keywords = 'лечение, реабилитация, алкоголизм, Луганск';
+    const description = ''
+        + 'Центр "Victory" поможет избавиться от алкогольной зависимости, '
+        + 'как Вам, так и Вашим близким. Позвоните нам по телефону '
+        + '+38 (050) 835-14-83 и получите бесплатную консультацию.';
+
     return (
         <DefaultLayout>
             <Head>
                 <title>Лечение алкоголизма в Луганске</title>
+                <meta name="description" content={description} />
+                <meta name="keywords" content={keywords} />
             </Head>
             <PagePromo heading="Наши услуги" headingLevel="2" headingTag="div">
                 <ServicesList className="column column--8-12 services-list--right-aligned" />

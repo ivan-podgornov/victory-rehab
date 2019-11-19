@@ -14,10 +14,19 @@ import UsageEffects from '../components/usage-effects/usage-effects';
 import WhyWe from '../components/why-we/why-we';
 
 export default function PageLechenieNarkomanii() {
+    const description = ''
+        + 'Центр "Victory" предоставляет услуги по реабилитации накрозависимости '
+        + 'в Луганске. Наши психологи в связке с родными и другими пациентами '
+        + 'помогут Вам выздороветь. Получите бесплатную консультацию по телефону: '
+        + '+38 (050) 835-14-83';
+    const keywords = 'лечение, реабилитация, наркомания, Луганск';
+
     return (
         <DefaultLayout>
             <Head>
                 <title>Лечение наркомании в Луганске</title>
+                <meta name="description" content={description} />
+                <meta name="keywords" content={keywords} />
             </Head>
             <PagePromo heading="Наши услуги" headingLevel="2" headingTag="div">
                 <ServicesList className="column column--8-12 services-list--right-aligned" />
@@ -27,9 +36,7 @@ export default function PageLechenieNarkomanii() {
                     <LayoutPositioner className="column__container column__container--space-between">
                         <div className="column column--5-12">
                             <header>
-                                <Heading level="2" tag="h1">
-                                    Лечение и реабилитация наркомании
-                                </Heading>
+                                <Heading level="2" tag="h1">Лечение и реабилитация наркомании</Heading>
                             </header>
                             <p>
                                 Наркомания - бич современного человечества. Всех разновидностей

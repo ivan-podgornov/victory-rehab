@@ -12,10 +12,18 @@ import ReviewsPreview from '../components/reviews-preview/reviews-preview';
 import WhyWe from '../components/why-we/why-we';
 
 export default function PageIndex() {
+    const keywords = 'реабилитация, лечение, наркомания, алкоголизм, игромания, зависимость';
+    const description = ''
+        + 'Реабилитационный центр "Victory" специализируется на реабилитации '
+        + 'зависимых людей по программе 12 шагов. Наш коллектив поможет Вам '
+        + 'избавиться от наркозависимости, алкоголизма и игромании.';
+
     return (
         <DefaultLayout>
             <Head>
                 <title>«Виктори» - лечение зависимости в Луганске</title>
+                <meta name="description" content={description} />
+                <meta name="keywords" content={keywords} />
             </Head>
             <PagePromo className="page-promo--block"><FirstScreen /></PagePromo>
             <article>

@@ -14,10 +14,18 @@ import UsageEffects from '../components/usage-effects/usage-effects';
 import WhyWe from '../components/why-we/why-we';
 
 export default function PageLechenieIgromanii() {
+    const description = ''
+        + 'Игромания - не менее опасная зависимость, чем алкоголизм или накромании. '
+        + 'Сотрудники центра "Victory" с пониманием отнесутся к Вашей проблеме и '
+        + 'помогут её решить, используя программу 12 шагов';
+    const keywords = 'лечение, реабилитация, игромания, Луганск';
+
     return (
         <DefaultLayout>
             <Head>
                 <title>Лечение игромании в Луганске</title>
+                <meta name="keywords" content={keywords} />
+                <meta name="description" content={description} />
             </Head>
             <PagePromo heading="Наши услуги" headingLevel="2" headingTag="div">
                 <ServicesList className="column column--8-12 services-list--right-aligned" />
