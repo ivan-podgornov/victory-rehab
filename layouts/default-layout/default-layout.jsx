@@ -10,6 +10,7 @@ export default function DefaultLayout(props) {
                 <html lang="ru" />
                 <body className="page" />
                 <meta charSet="utf-8" />
+                <meta name="google-site-verification" content="It7DPRm4hPurH2gThL9xtdiF0Wvi8IBEUioWD8ntJww" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
                 <script type="text/javascript" >{`
